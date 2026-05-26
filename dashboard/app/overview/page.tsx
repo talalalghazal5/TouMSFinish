@@ -4,6 +4,7 @@ import { Users, RefreshCw, XCircle } from "lucide-react";
 import { StatCard } from "@/components/overview/StatCard";
 import { SalesChart } from "@/components/overview/SalesChart";
 import { useBookingStats } from "@/hooks/useBookingStats";
+
 export default function OverviewPage() {
   const { stats, loading } = useBookingStats();
 
@@ -11,7 +12,6 @@ export default function OverviewPage() {
     <div className="space-y-6">
       <h1 className="text-2xl font-bold text-gray-900">Overview</h1>
 
-      {/* Stats Row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <StatCard
           title="Total Bookings"
@@ -36,7 +36,6 @@ export default function OverviewPage() {
         />
       </div>
 
-      {/* Chart */}
       <SalesChart />
     </div>
   );
